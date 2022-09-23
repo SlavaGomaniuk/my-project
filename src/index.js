@@ -6,7 +6,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let monthes = [
@@ -21,7 +21,7 @@ let monthes = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 let month = monthes[now.getMonth()];
 let minutes = `${now.getMinutes()}`.padStart(2, 0);
@@ -34,7 +34,7 @@ function tempKyiv(response) {
   let tempc = document.querySelector("#tempc");
   console.log(response);
   let tempKyiv = Math.round(response.data.main.temp);
-  let descKyivNow = response.data.weather[0].description;
+  let descKyivNow = response.data.weather[0].main;
   let descKyiv = document.querySelector("#descKyiv");
   console.log(tempKyiv);
   tempc.innerHTML = `${tempKyiv}`;
