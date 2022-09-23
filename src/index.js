@@ -106,7 +106,7 @@ function showTemp(response) {
   let humNew = response.data.main.humidity;
   console.log(humNew);
   let hum = document.querySelector("#hum");
-  tempNow.innerHTML = `🌡 ${tempC}℃ ${description}`;
+  tempNow.innerHTML = `🌡 ${tempC}℃... ${description}`;
   speed.innerHTML = `${windSpeed} `;
   hum.innerHTML = `${humNew}%`;
 }
@@ -132,7 +132,7 @@ function currentPosition(position) {
     let humNew = response.data.main.humidity;
     console.log(humNew);
     let hum = document.querySelector("#hum");
-    tempNow.innerHTML = `🌡 ${tempC}℃ ${description}`;
+    tempNow.innerHTML = `🌡 ${tempC}℃... ${description}`;
     speed.innerHTML = `${windSpeed} `;
     hum.innerHTML = `${humNew}%`;
     let currentCity = document.querySelector("#city");
